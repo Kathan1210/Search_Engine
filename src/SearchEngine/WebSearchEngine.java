@@ -11,6 +11,7 @@ public class WebSearchEngine {
 		System.out.println("1. Search the pattern in the URL list of www.w3schools.com");
 		System.out.println("2. Find the Pattern in the Text files");
 		System.out.println("3. Word Search and finding top 5 pages");
+		System.out.println("4. Word file Suggestion");
 		System.out.println("6. exit");
 	}
 
@@ -22,6 +23,8 @@ public class WebSearchEngine {
 		crawl.start_crawler();
 		SearchEngine.HTMLtoText html_to_text = new SearchEngine.HTMLtoText();
 		html_to_text.html_to_text();
+		SearchEngine.DictionaryMaker dict_maker = new SearchEngine.DictionaryMaker();
+		dict_maker.dictionary();
 		System.out.println("****Data is Generated*****");
 		
 		Scanner sc = new Scanner(System.in);
@@ -43,6 +46,9 @@ public class WebSearchEngine {
 				SearchEngine.page_ranking pr = new SearchEngine.page_ranking();
 				pr.rank_page(word);
 				break;
+			case 4:
+				SearchEngine.Suggestion sug = new SearchEngine.Suggestion();
+				sug.word_file_suggest(word);
 			case 6:
 				sc.close();
 				System.exit(0);
