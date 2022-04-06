@@ -56,7 +56,10 @@ public class Suggestion {
                         }
                         System.out.println();
                         //System.out.println("input file sets--> "+ inputFileSet);
-                        
+                        if(inputFileSet.isEmpty()) {
+                        	System.out.println("Not Found");
+                        	System.exit(0);
+                        }
                         HashSet<String> intersectionSet= inputFileSet.get(0);
                         for(int i=1;i< inputFileSet.size();i++ ) {
                                 intersectionSet.retainAll(inputFileSet.get(i));

@@ -39,19 +39,19 @@ public class Crawler {
             return false;
         }
 		if(url.contains("instagram")) {
-            System.out.println("Instagram is Blocked");
+            //System.out.println("Instagram is Blocked");
             return false;
         }
         if(url.contains("linkedin")) {
-            System.out.println("Linkedin in Blocked");
+            //System.out.println("Linkedin in Blocked");
             return false;
         }
         if(url.contains("facebook")) {
-            System.out.println("facebook is Blocked");
+            //System.out.println("facebook is Blocked");
             return false;
         }
         if(url.contains("twitter")) {
-            System.out.println("Twitter is Blocked");
+            //System.out.println("Twitter is Blocked");
             return false;
         }
         return true;
@@ -79,7 +79,7 @@ public class Crawler {
             	try {
             		org.jsoup.nodes.Document document = Jsoup.connect(url).get();
 					String html = document.html();
-					String file_name = "data//html//"+ "w3schools" + count+ ".html";
+					String file_name = "data//html//"+ count+ ".html";
 					File html_file = new File(file_name);
 					html_file_to_url.put(file_name, url);
 					html_file.createNewFile();
@@ -104,9 +104,9 @@ public class Crawler {
             return false;
         }
 	}
-	public void start_crawler() throws IOException {
+	public void start_crawler(String website) throws IOException {
 		Crawler gd_obj = new Crawler();
-		gd_obj.crawl("https://www.w3schools.com/");
+		gd_obj.crawl(website);
 		List<String> links = web_links;
 		try {
 			File url_file = new File("data//URLs//"+ "urls.txt");;
@@ -131,6 +131,6 @@ public class Crawler {
 		catch(Exception e) {
 			System.out.println("Exception: " +e);
 		}
-		System.out.println(links_crawled.size());
+		//System.out.println(links_crawled.size());
 	}
 }

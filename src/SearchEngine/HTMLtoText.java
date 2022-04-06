@@ -44,7 +44,7 @@ public class HTMLtoText {
 		}
 		for(int i=0; i<file_names.size(); i++) {
 			String file_name = file_names.get(i);
-			System.out.println(file_name);
+			//System.out.println(file_name);
 			HTMLtoText_converter(file_name);
 		}
 	}

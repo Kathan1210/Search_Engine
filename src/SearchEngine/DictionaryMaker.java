@@ -55,22 +55,22 @@ public class DictionaryMaker {
                  stopSet = new CharArraySet(stopWords, true);
         }
         
-        public         String[] preprocessing(CharArraySet stopSet, String input) throws IOException  {
-                // TODO Auto-generated method stub
-                        ArrayList<String> result = new ArrayList<String>();
-                        Analyzer analyzer = new EnglishAnalyzer(stopSet); // Only uses the given "stopSet" but also runs a stemmer, so the result might not look like what you expected.
-                        TokenStream tokenStream = analyzer.tokenStream("contents", new StringReader(input));
-                        CharTermAttribute term = tokenStream.addAttribute(CharTermAttribute.class);
-                        tokenStream.reset();
-                        while(tokenStream.incrementToken()) {
-                                System.out.print("[" + term.toString() + "] ");
-                                result.add(term.toString());
-                        }
-                        tokenStream.close();
-                        analyzer.close();
-                        String[] resultArr= new String[result.size()];
-                        result.toArray(resultArr);
-                        return resultArr;
+        public String[] preprocessing(CharArraySet stopSet, String input) throws IOException  {
+        	// TODO Auto-generated method stub
+             ArrayList<String> result = new ArrayList<String>();
+             Analyzer analyzer = new EnglishAnalyzer(stopSet); // Only uses the given "stopSet" but also runs a stemmer, so the result might not look like what you expected.
+             TokenStream tokenStream = analyzer.tokenStream("contents", new StringReader(input));
+             CharTermAttribute term = tokenStream.addAttribute(CharTermAttribute.class);
+             tokenStream.reset();
+             while(tokenStream.incrementToken()) {
+                System.out.print("[" + term.toString() + "] ");
+                result.add(term.toString());
+             }
+             tokenStream.close();
+             analyzer.close();
+             String[] resultArr= new String[result.size()];
+             result.toArray(resultArr);
+             return resultArr;
         }
         
         public void createDictionary() throws IOException {

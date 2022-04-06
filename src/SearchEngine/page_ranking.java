@@ -58,7 +58,7 @@ public class page_ranking {
          for(Map.Entry<String, Integer> entry : hashmap1.entrySet()) {
         	 String key = entry.getKey();
         	 String url = SearchEngine.HTMLtoText.text_file_to_url.get(key);
-        	 System.out.println(url);
+        	 System.out.println(key + "----->" +"    "+url);
         	 count++;
         	 if(count == 5) {
         		 break;
