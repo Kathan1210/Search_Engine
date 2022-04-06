@@ -1,0 +1,142 @@
+Regex Tutorial | Regular Expression - Javatpoint? SCROLL TO TOPHomeJavaRegExJavaScriptPHPC++PythonCHTMLCSSAptitudeSeleniumQuizProjectsInterview QCommentForumTrainingRegEx TutorialRegEx TutorialRegex TutorialThe term Regex stands for Regular expression. The regex or regexp or regular expression is a sequence of different characters which describe the particular search pattern. It is also referred/called as a Rational expression.It is mainly used for searching and manipulating text strings. In simple words, you can easily search the pattern and replace them with the matching pattern with the help of regular expression.This concept or tool is used in almost all the programming or scripting languages such as PHP, C, C++, Java, Perl, JavaScript, Python, Ruby, and many others. It is also used in word processors such as word which helps users for searching the text in a document, and also used in various IDEs.The pattern defined by the regular expression is applied to the given string or a text from left to right.Regular Expression CharactersThere are following different type of characters of a regular expression:MetacharactersQuantifierGroups and RangesEscape Characters or character classesMetacharactersMetacharactersDescriptionExample^This character is used to match an expression to its right at the start of a string.^a is an expression match to the string which starts with 'a' such as "aab", "a9c", "apr", "aaaaab", etc.$The $sign is used to match an expression to its left at the end of a string.r$ is an expression match to a string which ends with r such as "aaabr", "ar", "r", "aannn9r", etc..This character is used to match any single character in a string except the line terminator, i.e. /n.b.x is an expression that match strings such as "bax", "b9x", "bar".|It is used to match a particular character or a group of characters on either side. If the character on the left side is matched, then the right side's character is ignored.A|b is an expression which gives various strings, but each string contains either a or b.\It is used to escape a special character after this sign in a string.AIt is used to match the character 'A' in the string.This expression matches those strings in which at least one-time A is present. Such strings are "Amcx", "mnAr", "mnopAx4".AbIt is used to match the substring 'ab' in the string.This expression matches those strings in which 'Ab' is present at least one time. Such strings are "Abcx", "mnAb", "mnopAbx4".QuantifiersThe quantifiers are used in the regular expression for specifying the number of occurrences of a character.CharactersDescriptionExample+This character specifies an expression to its left for one or more times.s+ is an expression which gives "s", "ss", "sss", and so on.?This character specifies an expression to its left for 0 (Zero) or 1 (one)times.aS? is an expression which gives either "a" or "as", but not "ass". *This character specifies an expression to its left for 0 or more timesBr* is an expression which gives "B", "Br", "Brr", "Brrr", and so on…{x}It specifies an expression to its left for only x times.Mab{5} is an expression which gives the following string which contains 5 b's:"Mabbbbb"{x, }It specifies an expression to its left for x or more times.Xb{3, } is an expression which gives various strings containing at least 3 b's. Such strings are "Xbbb", "Xbbbb", and so on.{x,y}It specifies an expression to its left, at least x times but less than y times.Pr{3,6}a is an expression which provides two strings.Both strings are as follows:"Prrrr" and "Prrrrr" Groups and RangesThe groups and ranges in the regular expression define the collection of characters enclosed in the brackets.CharactersDescriptionExample(  )It is used to match everything which is in the simple bracket.A(xy) is an expression which matches with the following string:"Axy"{   }It is used to match a particular number of occurrences defined in the curly bracket for its left string.xz{4,6} is an expression which matches with the following string:"xzzzzz"[    ]It is used to match any character from a range of characters defined in the square bracket.xz[atp]r is an expression which matches with the following strings:"xzar", "xztr", and "xzpr"[pqr]It matches p, q, or r individually.Following strings are matched with this expression:"p", "q", and "r".[pqr][xy]It matches p, q, or r, followed by either x or y.Following strings are matched with this expression:"px", "qx", and "rx", "py", "qy", and "ry".(?: …)It is used for matching a non-capturing group.A(?:nt|pple) is an expression which matches to the following string:"Apple"[^…..]It matches a character which is not defined in the square bracket.Suppose, Ab[^pqr] is an expression which matches only the following string:"Ab"[a-z]It matches letters of a small case from a to z.This expression matches the strings such as:"a", "python", "good". [A-Z]It matches letters of an upper case from A to Z.This expression matches the strings such as:"EXCELLENT", "NATURE". ^[a-zA-Z]It is used to match the string, which is either starts with a small case or upper-case letter.This expression matches the strings such as:"A854xb", "pv4fv", "cdux".[0-9]It matches a digit from 0 to 9.This expression matches the strings such as:"9845", "54455"[aeiou]This square bracket only matches the small case vowels.-[AEIOU]This square bracket only matches the upper-case vowels.-ab[^4-9]It matches those digits or characters which are not defined in the square bracket.This expression matches those strings which do not contain 5, 6, 7, and 8.Escape Characters or Character ClassesCharactersDescription\sIt is used to match a one white space character.\SIt is used to match one non-white space character.\0It is used to match a NULL character.\aIt is used to match a bell or alarm.\dIt is used to match one decimal digit, which means from 0 to 9.\DIt is used to match any non-decimal digit.\n It helps a user to match a new line. \wIt is used to match the alphanumeric[0-9a-zA-Z] characters.\WIt is used to match one non-word character\bIt is used to match a word boundary.Regular Expression in Different LanguagesThere are following scripting and programming languages which use the regular expression:Use of Regular Expression in JavaUse of Regular Expression in PHPUse of Regular Expression in PythonUse of Regular Expression in JavaScriptUse of Regular Expression in Java (Java Regex)In Java language, Regex or Regular Expression is an application programming interface which is used for manipulating, searching, and editing a string. You can use the regular expression in java by importing the java.util.regex API package in your code.There are the following three classes which comes under the java.util.regex package:regex.Pattern: This class helps in defining the patternsregex.Matcher: This class helps in performing the match operations on an inputted string using patterns.PatternSyntaxException: This class helps the users by indicating the syntax error in a regular expression pattern.util.regex.Pattern ClassThis class (util.regex.Pattern)is a compiled version of Regex and can be called by the compile() method. The compile() method accepts the regex as a first argument. This class does not provide any public constructor.Following are the different functions in Pattern class:Methods()Descriptionstatic Pattern compile(String regex)This method is used to compile the given regex into a pattern.Matcher Matcher (CharSequence input)This method creates a matcher for matching the pattern with the given string, which is inputted by a user.String toString()This method returns the representation of the string.String[] split(CharSequence input)This method splits a string on the basis of matches.Static Boolean matches(String regex CharSequence input)This method matches the regular expression against the given input string.util.regex.Matcher ClassThis class is used for performing the match operation on the input string by calling a matcher() function on any object or Pattern. This class does not define any public constructor.Following are the different functions in Matcher class:Methods()Descriptionboolean matches()This method checks whether the regular expression matches the pattern or not.boolean find()This method searches the occurrences of regex in a string.boolean find(int start)This method searches the occurrences of regex in a string from the starting index.String group()This method helps in finding the matched subsequence.int start()This method helps in returning the starting index of the matched subsequence.int end()This method helps in returning the last index of the matched subsequence.int groupCount()This method helps in returning the total number of the matched subsequence.Examples of use Regular Expression in JavaExample 1: This example helps in understanding the dot operator in Java code.import java.util.regex.*;  
+class reg{  
+public static void main(String args[]){  
+System.out.println(Pattern.matches(".r.", "arp")); // This statement displays Boolean value True because the second character is r in both string and regular exp.   
+System.out.println(Pattern.matches(".bm", "abc")); //This statement displays Boolean value False because the third character is different in both string and regular exp.     
+System.out.println(Pattern.matches("..m", "msm")); //This statement displays Boolean value True because the third character is m in both string and regular exp.     
+System.out.println(Pattern.matches("a..s", "amns")); //This statement displays Boolean value True because the first and last character is same in both string and regular exp.    
+System.out.println(Pattern.matches(".s.", "mas")); //This statement displays Boolean value False because the second character is different in both string and regular exp.     
+}
+}Test it NowOutput:Example 2: The following example uses the different characters of regular expression.import java.util.regex.*;  
+class Reg1{  
+public static void main(String args[]){     
+
+System.out.println(" 1. ");   
+System.out.println(
+     Pattern.matches("^[ a-z]om", "Tom")); // This statement returns False because the string starts with the Upper-case letter which does not match with the regex.
+
+System.out.println(" 2. "); 	
+System.out.println(
+     Pattern.matches("[Rpq]om", "Tom")); // This statement returns False because the string starts with 'T', which does not match with any character R, P, or Q of Regex.
+
+System.out.println(" 3. "); 
+System.out.println(
+     Pattern.matches("[Tt]om", "Tom")); // This statement returns True because the string starts with 'T' which matches with a character T from Regex.
+
+System.out.println(" 4. "); 	  
+System.out.println(
+     Pattern.matches("Cat|Rat", "Rat")); // This statement returns True because the string matches with the Second part from the Regular Expression.
+
+System.out.println(" 5. "); 
+System.out.println(
+     Pattern.matches("[CM]at|[Bb]ad", "Bad")); // This statement returns True because the string matches with the Second part from the Regular Expression.
+	
+System.out.println(" 6. ");    
+System.out.println(
+     Pattern.matches(".*bit.*", "rabbit")); // This statement returns True because the string contains the bit which match to the Regular Expression.
+
+System.out.println(" 7. "); 	
+System.out.println(
+     Pattern.matches("^[\\d].*", "abc")); // This statement returns True because the string starts with the letter not a digit, which does not match with the regular expression.  
+
+System.out.println(" 8. "); 
+System.out.println(
+     Pattern.matches("^[^\\d].*", "abc123")); // This statement returns True because the string starts with the letter, which matches with the regular expression due to the negation of digit.
+
+System.out.println(" 9. "); 	
+   System.out.println(
+     Pattern.matches("[a-zA-Z][a-zA-Z][0-9A-Z]", "aPz")); // This statement returns False because the last character 'z' in string does not match with the  with the '0-9A-Z' in regular expression.  
+
+System.out.println(" 10. "); 
+   System.out.println(
+     Pattern.matches("[a-zA-Z][a-zA-Z][a-zA-Z]", "aAA")); // This statement returns True because the all the characters in string matches with the  with the regular expression.
+
+System.out.println(" 11. "); 
+System.out.println(
+     Pattern.matches("java[tT]poin[tT]$", "javaTpoint")); // This statement returns True because the string ends with the 't' character which matches with the regular expression.
+
+System.out.println(" 12. "); 	  
+System.out.println(
+     Pattern.matches("\\D*", "abcde")); // This statement returns True because the string does not contain any digit, so it follows the regular expression.
+
+System.out.println(" 13. "); 
+System.out.println(
+     Pattern.matches("\\D*", "abcde123")); // This statement returns False because the string contains the digits, so it does not follow the regular expression.
+}
+}Test it NowOutput:Use of Regular Expression in PHPYou can use the regular expression (regex) in the PHP by taking the help of functions of PCRE (Perl Compatible Regular Expression) library.There are different types of built-in functions in the following table, which are used for working with regular expressions. These functions are case-sensitive.FunctionsDescriptionpreg_match()The preg_match() function returns true if a regular expression matches a specific string, otherwise false.preg_match_all()The preg_match_all() function is used for matching all the occurrences of pattern in a string.preg_replace()The preg_replace() function matches a pattern and then replace it with the string.preg_split()The preg_split() function divides the string into substring using a regex.Preg_grep()The preg_grep() function is used to return all those elements of input array which matches the regular expression pattern.Examples of use Regular Expression in PHPExample 1: The following example helps in understanding how to use the character class or a group in a regular expression for matching with string.<?php
+$regExp = "/[a-zA-Z]+ \d+/";
+if (preg_match($regExp, "Januaury 26")) // This statement matches the regular expression with the string, If mathces then if statement executes, otherwise else statment. 
+{
+    echo "The regular expression and string are the same.";
+} else 
+{
+    echo "The regex pattern does not match with the string."; 
+}
+
+?>The above program of php gives the following output:The regular expression and string are the same.Example 2: The following example helps in understanding how to use the '^' character in the PHP code.<?php
+$regexp = "/^J/";
+$employeenames = array("Clark Kent","John Carter", "John Rambo");
+$matches = preg_grep($regexp, $employeenames); // This statement store those names in $matches variables which are start with the Upper-case J letter.
+// Loop through matches array and display matched names
+foreach($matches as $match){
+    echo $match . "<br>";
+}
+?>The above program of php gives the following output:John Carter
+John RamboUse of Regular Expression in Python (Python Regex)You can use the regular expression (Regex) in the code of Python by importing the re module in your script. This module defines the various function or methods which are used for handling the regular expression.The following table defines the various functions:MethodsDescriptionre.match()The re.match() method is used to return a string which is matched with the regular expression.re.search()The re.search() method returns an object of the match when the pattern is found in a string or text.re.findall()The re.findall() method is used to return a string list containing all the matches.re.split()The re.split() method is used to divide the string on the basis of matching with the regular expression.re.sub()The re.sub() method is used to replace the matched string with another string.Examples of use Regular Expression in PythonExample 1: This example helps in understanding how to use the findall() method in python script.import re
+
+string = 'Fruits 32, Animals 80, Cars 34'
+pattern = '\D+'
+
+match = re.findall(pattern, string)       #This statement is used to store the matching values on the basis of a given pattern from the string.  
+print(match)   #This statement displays the values which are stored in match variableThe above program of python with regular expression gives the following output:['Fruits ', ', Animals ', ', Cars ']Example 2: This example helps in understanding how to use the split(), search(), and sub() methods in python script.import re
+string = 'Zero:0 one:1 Two:2 Three:3 Four:4 Five:5 Six:6 Seven:7 eight:8 Nine:9 Ten:10 Twenty:20 Thirty:30 Forty:40 Fifty:50 Sixty:60 Seventy:70 Eighty:80 Ninety:90 Hundred:100'
+regex = '\d+'
+
+splitval = re.split(regex, string)      #This statement splits the string on the basis of matching values between pattern and string.   
+print(splitval)
+
+string = 'a1 \nb2 \nc4'
+pattern = '\d' # This statement defines the regular expression for matching with the string. 
+
+# empty string
+replace = 's'
+new_string = re.sub(pattern, replace, string)       # This statement replaces those matched characters with a string stored in a replace variable. 
+print(new_string)    # This statement displays the new string after the replacement of characters.
+
+text = "Regular Expression is also referred as Regex."
+regex= "\d"
+res = re.search(regex, text)   # This statement searches the regular expression in a string. 
+if res:
+  print("Regular expression found inside the string")
+else:
+  print("Regular expression not found inside the String")The above program of python with regular expression gives the following output:['Zero:', ' one:', ' Two:', ' Three:', ' Four:', ' Five:', ' Six:', ' Seven:', ' eight:', ' Nine:', ' Ten:', ' Twenty:', ' Thirty:', ' Forty:', ' Fifty:', ' Sixty:', ' Seventy:', ' Eighty:', ' Ninety:', ' Hundred:', '']as 
+bs 
+cspattern not found inside the StringUse of Regular Expression in JavaScriptYou can easily use the regular expression in the JavaScript code by the help of following two string methods:search(): This method searches the regular expression in the string and also returns the position where the match found.Replace(): This method is used to return the string after the replacement of a matched character in a string.Examples of Regular Expression in JavaScriptExample 1: This example uses the search() method in the JavaScript script for understanding the regular expression.<!DOCTYPE html>
+<html>
+<head>
+<script>
+var string = "Our Site is helpfull for studying about technical courses.!"; 
+pattern="technical";
+var res = string.search(pattern); /* This statement stores the position of the pattern in a string, if it is found in a string. */
+document.write("Position of the pattern in a string:"); 
+document.write(res); 
+</script>
+</head>
+<body>
+</body>
+</html>Test it NowThe above program of JavaScript with regular expression gives the following output:Position of the pattern in a string:40Example 2: This example uses the replace() method in the JavaScript script for understanding the regular expression.<html>
+<head>
+<script>
+var string = "You are a Bad Student"; 
+var pattern=/Bad/;
+var replace="Good";
+var res = string.replace(/Bad/,replace);  
+/* The above statement replaces the Bad word from the string by the Good word using the replace method. */
+document.write("After replacing the substring, the modified string is:"+ '<br>');
+document.write(res); 
+</script> 
+</head>
+<body>
+</body>
+</html>Test it NowThe above program of JavaScript with regular expression gives the following output:After replacing the substring, the modified string is:
+You are a Good StudentFor Videos Join Our Youtube Channel: Join NowFeedbackSend your Feedback to [email protected]Help Others, Please ShareLearn Latest TutorialsSplunkSPSSSwaggerTransact-SQLTumblrReactJSRegexReinforcement LearningR ProgrammingRxJSReact NativePython Design PatternsPython PillowPython TurtleKerasPreparationAptitudeReasoningVerbal AbilityInterview QuestionsCompany QuestionsTrending TechnologiesArtificial IntelligenceAWSSeleniumCloud ComputingHadoopReactJSData ScienceAngular 7BlockchainGitMachine LearningDevOpsB.Tech / MCADBMSData StructuresDAAOperating SystemComputer NetworkCompiler DesignComputer OrganizationDiscrete MathematicsEthical HackingComputer GraphicsSoftware EngineeringWeb TechnologyCyber SecurityAutomataC ProgrammingC++Java.NetPythonProgramsControl SystemData MiningData WarehouseJavatpoint ServicesJavaTpoint offers too many high quality services. Mail us on [email protected], to get more information about given services.Website DesigningWebsite DevelopmentJava DevelopmentPHP DevelopmentWordPressGraphic DesigningLogoDigital MarketingOn Page and Off Page SEOPPCContent DevelopmentCorporate TrainingClassroom and Online TrainingData EntryTraining For College CampusJavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at [email protected]Duration: 1 week to 2 weekLike/Subscribe us for latest updates or newsletter Learn TutorialsLearn JavaLearn Data StructuresLearn C ProgrammingLearn C++ TutorialLearn C# TutorialLearn PHP TutorialLearn HTML TutorialLearn JavaScript TutorialLearn jQuery TutorialLearn Spring TutorialOur WebsitesJavatpoint.comHindi100.comLyricsia.comQuoteperson.comJobandplacement.comOur ServicesWebsite DevelopmentAndroid DevelopmentWebsite DesigningDigital MarketingSummer TrainingIndustrial TrainingCollege Campus TrainingContactAddress: G-13, 2nd Floor, Sec-3Noida, UP, 201301, IndiaContact No: 0120-4256464, 9990449935Contact Us Subscribe Us Privacy PolicySitemapAbout Me© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.

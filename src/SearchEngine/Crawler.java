@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -57,7 +58,7 @@ public class Crawler {
         return true;
 	}
 
-	public boolean crawl(String url) {
+	public boolean crawl(String url, String file_inital) {
 		if(validateUrls(url) == false) {
 			return false;
 		}
@@ -79,7 +80,7 @@ public class Crawler {
             	try {
             		org.jsoup.nodes.Document document = Jsoup.connect(url).get();
 					String html = document.html();
-					String file_name = "data//html//"+ count+ ".html";
+					String file_name = "data//html//"+ file_inital+ count+ ".html";
 					File html_file = new File(file_name);
 					html_file_to_url.put(file_name, url);
 					html_file.createNewFile();
@@ -105,8 +106,11 @@ public class Crawler {
         }
 	}
 	public void start_crawler(String website) throws IOException {
+		//System.out.println(website);
 		Crawler gd_obj = new Crawler();
-		gd_obj.crawl(website);
+		String file_split[] = website.split(Pattern.quote("."));
+		String file_initial = file_split[1];
+		gd_obj.crawl(website, file_initial);
 		List<String> links = web_links;
 		try {
 			File url_file = new File("data//URLs//"+ "urls.txt");;
@@ -119,7 +123,7 @@ public class Crawler {
 					if(url.equals("javascript:void(0)")) {
 						continue;
 					}
-					gd_obj.crawl(links.get(i));
+					gd_obj.crawl(links.get(i), file_initial);
 					ArrayList<String> crawledUrls = new ArrayList<String>(web_links);
 					writer_obj.println();
 					writer_obj.println(crawledUrls);

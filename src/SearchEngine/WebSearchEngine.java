@@ -8,11 +8,11 @@ public class WebSearchEngine {
 	
 	public static void options() {
 		System.out.println("Choose one of the options from the below options list:");
-		System.out.println("1. Search the pattern in the URL list of www.w3schools.com");
+		System.out.println("1. Search the pattern in the URL list");
 		System.out.println("2. Find the Pattern in the Text files");
 		System.out.println("3. Word Search and finding top 5 pages");
 		System.out.println("4. Word file Suggestion");
-		System.out.println("6. exit");
+		System.out.println("5. exit");
 	}
 
 	public static void start() throws IOException, InterruptedException {
@@ -60,7 +60,7 @@ public class WebSearchEngine {
 				System.out.println();
 				System.out.println();
 				break;
-			case 6:
+			case 5:
 				sc.close();
 				System.exit(0);
 			default:

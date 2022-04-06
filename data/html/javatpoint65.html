@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Salesforce | Salesforce Tutorial - Javatpoint</title>
+  <link rel="SHORTCUT ICON" href="https://static.javatpoint.com/images/favicon2.png"> 
+  <link rel="stylesheet" type="text/css" href="https://static.javatpoint.com/link.css?v=5.0" async>
+  <link rel="dns-prefetch" href="https://clients1.google.com">
+  <link rel="dns-prefetch" href="https://static.javatpoint.com">
+  <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://feedify.net">
+  <meta name="theme-color" content="#4CAF50">
+  <meta property="og:title" content="Salesforce | Salesforce Tutorial - Javatpoint">
+  <meta property="og:description" content="Salesforce | Salesforce Tutorial with What is Salesforce, CRM, Architecture, Navigating Salesforce.com, Features, Editions, Licenses, Cloud Services, Salesforce Vs HubSpot, Salesforce Vs SAP etc."> 
+  <meta name="keywords" content="salesforce, salesforce tutorial, what is salesforce, salesforce crm, salesforce architecture, how to access salesforce, navigating salesforce.com, salesforce features, salesforce editions, salesforce licenses, salesforce cloud services, salesforce vs hubspot, salesforce vs sap">
+  <meta name="description" content="Salesforce | Salesforce Tutorial with What is Salesforce, CRM, Architecture, Navigating Salesforce.com, Features, Editions, Licenses, Cloud Services, Salesforce Vs HubSpot, Salesforce Vs SAP etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="canonical" href="https://www.javatpoint.com/salesforce"> 
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" property="og:title" content="Salesforce | Salesforce Tutorial - Javatpoint">
+  <meta name="twitter:description" property="og:description" content="Salesforce | Salesforce Tutorial with What is Salesforce, CRM, Architecture, Navigating Salesforce.com, Features, Editions, Licenses, Cloud Services, Salesforce Vs HubSpot, Salesforce Vs SAP etc.">
+  <meta property="og:url" content="https://www.javatpoint.com/salesforce">
+  <meta property="og:site_name" content="www.javatpoint.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pagejavatpoint">
+  <meta name="twitter:domain" content="www.javatpoint.com">
+  <meta name="twitter:creator" content="@pagejavatpoint"> 
+  <link href="https://www.javatpoint.com/manifest.json" rel="manifest"> 
+  <script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//delivery.adrecover.com/37784/adRecover.js?ts=1543562646174'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script> 
+  <script data-cfasync="false" type="text/javascript">
+(function (w, d) {
+  var siteId = "37780";
+  var targetElement =
+    d.getElementsByTagName("head")[0] || d.getElementsByTagName("body")[0];
+  var s = d.createElement("script");
+  s.src = "//cdn.adpushup.com/" + siteId + "/adpushup.js";
+  s.crossOrigin = "anonymous";
+  s.type = "text/javascript";
+  s.async = true;
+  targetElement.appendChild(s);
+  function sendErrorLog(log) {
+    var eventName = "script_error";
+    log.siteId = siteId;
+    var data = btoa(JSON.stringify(log));
+    var img = document.createElement("img");
+    img.src =
+      "https://aplogger.adpushup.com/log?event=HC_" + eventName + "&data=" + data;
+  }
+  var searchParams =
+    typeof URLSearchParams === "function" &&
+    new URLSearchParams(window.location.search);
+  if (searchParams) {
+    var isDebugModeOn = searchParams.has("apDebug");
+  }
+  w.addEventListener("error", function (event) {
+    try {
+      var filename = event.filename || "";
+      if (filename.indexOf("/" + siteId + "/adpushup.js") === -1) {
+        return;
+      }
+      var error = event.error;
+      if (error) {
+        var message = error.message;
+        var stack = error.stack;
+      }
+      message = message || event.message;
+      var log = {
+        message: message,
+        stack: stack || "",
+        timestamp: Math.floor(event.timeStamp),
+        type: "uncaughterror",
+      };
+      sendErrorLog(log);
+      !isDebugModeOn && event.preventDefault();
+    } catch (error) {}
+  });
+  w.addEventListener("unhandledrejection", function (event) {
+    var reason = event.reason;
+    if (typeof reason === "object") reason = JSON.stringify(reason);
+    var log = {
+      message: reason || "no reason found",
+      timestamp: Math.floor(event.timeStamp),
+      type: "unhandledrejection",
+    };
+    sendErrorLog(log);
+    !isDebugModeOn && event.preventDefault();
+  });
+  var ga = d.createElement("script");
+  ga.src = "https://www.googletagmanager.com/gtag/js?id=G-Z0TZ7TDHS1";
+  ga.type = "text/javascript";
+  ga.async = true;
+  targetElement.appendChild(ga);
+  w.dataLayer = window.dataLayer || [];
+  w.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  w.gtag("js", new Date());
+  w.gtag("config", "G-Z0TZ7TDHS1", {
+    custom_map: { dimension1: "siteid" },
+  });
+  w.gtag("event", "script-call", {
+    send_to: "G-Z0TZ7TDHS1",
+    siteid: siteId,
+  });
+  s.onerror = function (msg) {
+    w.gtag("event", "ad-block", {
+      send_to: "G-Z0TZ7TDHS1",
+      siteid: siteId,
+    });
+  };
+})(window, document);
+</script> 
+ </head> 
+ <body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn">&#x21e7; SCROLL TO TOP</button> 
+  <div id="page" style="margin:-8px;background-color:#f5f5f4;">
+   <div id="container"> 
+    <div class="header">
+     <table style="width:100%;margin-bottom:5px"> 
+      <tbody>
+       <tr> 
+        <td> 
+         <div style="clear:both;float:left;width:230px;margin-top:15px;margin-left:20px"> <a href="https://www.javatpoint.com"><img src="https://static.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a> 
+         </div> 
+         <div style="float:left;width:60%;">
+          <script> (function() { var cx = '005383125436438536544:y1edweedxwi'; var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true; gcse.src = 'https://cse.google.com/cse.js?cx=' + cx; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s); })();</script><gcse:search></gcse:search> 
+         </div> </td> 
+       </tr>
+      </tbody>
+     </table> 
+    </div> 
+    <div class="headermobile"> 
+     <div style="margin-top:10px;padding:0px;text-align:left;"> <span style="float:left"><input type="image" src="https://www.javatpoint.com/images/menuhome64.png" alt="Go To Top" onclick="showmenu()"></span> <span style="float:left"><a href="https://www.javatpoint.com"><img src="https://www.javatpoint.com/images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span> 
+     </div> 
+     <div style="margin:0px;padding:0px;clear:both"> 
+      <script>
+  (function() {
+    var cx = '005383125436438536544:y1edweedxwi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script> <gcse:search></gcse:search> 
+     </div> 
+    </div> 
+    <div id="link" style="clear:both"> 
+     <div class="ddsmoothmenu"> 
+      <ul> 
+       <li><a href="https://www.javatpoint.com">Home</a></li> 
+       <li><a href="salesforce" class="selected">Salesforce</a></li> 
+       <li><a href="artificial-intelligence-tutorial">Artificial Intelligence</a></li> 
+       <li><a href="machine-learning">Machine Learning</a></li> 
+       <li><a href="blockchain-tutorial">Blockchain</a></li> 
+       <li><a href="control-system-tutorial">Control System</a></li> 
+       <li><a href="selenium-tutorial">Selenium</a></li> 
+       <li><a href="data-structure-tutorial">DS</a></li> 
+       <li><a href="dbms-tutorial">DBMS</a></li> 
+       <li><a href="java-tutorial">Java</a></li> 
+       <li><a href="html-tutorial">HTML</a></li> 
+       <li><a href="css-tutorial">CSS</a></li> 
+       <li><a href="javascript-tutorial">JavaScript</a></li> 
+       <li><a href="corejava-interview-questions">Interview Q</a></li> 
+      </ul> 
+      <br style="clear: left"> 
+     </div>
+    </div> 
+    <div class="mobilemenu" style="clear:both"> 
+     <ins class="adPushupAds" data-adpcontrol="hqdgs" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSBDbV8zMDB4MjUwX01vYl8xNC85IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MzAwcHg7aGVpZ2h0OjI1MHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjcwMTQyNzI1MTkiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4="></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <div id="menu"> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Salesforce Tutorial</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="salesforce">Salesforce Tutorial</a> <a href="salesforce-overview-of-cloud-computing">Cloud Computing</a> <a href="salesforce-crm">Salesforce CRM</a> <a href="salesforce-architecture">Salesforce Architecture</a> <a href="salesforce-dot-com-offerings-services-by-salesforce">Navigating Salesforce.com</a> <a href="features-of-salesforce">Salesforce Features</a> <a href="salesforce-editions">Salesforce Editions</a> <a href="salesforce-licenses">Salesforce Licenses</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Cloud Services</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="salesforce-sales-cloud">Salesforce Sales Cloud</a> <a href="salesforce-service-cloud">Salesforce Service Cloud</a> <a href="salesforce-marketing-cloud">Salesforce Marketing Cloud</a> <a href="salesforce-community-cloud">Salesforce Community Cloud</a> <a href="salesforce-commerce-cloud">Salesforce Commerce Cloud</a> 
+     </div> 
+     <div class="leftmenu2"> 
+      <h2 class="spanh2"><span class="spanh2">Salesforce vs Other CRM</span></h2> 
+     </div> 
+     <div class="leftmenu"> <a href="salesforce-vs-hubspot-crm">Salesforce vs HubSpot CRM</a> <a href="salesforce-vs-sap">Salesforce vs SAP</a> 
+     </div> 
+     <img src="https://www.javatpoint.com/wh.JPG" alt="JavaTpoint"> 
+     <br> 
+     <div id="leftad" style="margin-left:20px"> 
+      <div id="17c09743-0b89-427c-ba64-e09f6a1745a2" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("17c09743-0b89-427c-ba64-e09f6a1745a2");
+		});
+	</script> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="onlycontent"> 
+     <div class="onlycontentad"> 
+      <div id="9bbcb75d-b5e2-40e1-a811-e7680d1f59a4" class="_ap_apex_ad"> 
+       <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("9bbcb75d-b5e2-40e1-a811-e7680d1f59a4");
+		});
+	</script> 
+      </div> 
+     </div> 
+     <div class="onlycontentinner"> 
+      <div id="city"> 
+       <table> 
+        <tbody>
+         <tr>
+          <td> 
+           <div id="bottomnextup"> <a class="next" href="salesforce-overview-of-cloud-computing">next &#x2192;</a> 
+           </div> <h1 class="h1">Salesforce Tutorial</h1> <img src="https://static.javatpoint.com/tutorial/salesforce/images/salesforce-tutorial.png" class="imageright" alt="Salesforce Tutorial"> <p>Salesforce is one of the best cloud-based CRM platforms. It is an integrated CRM platform that provides a single shared view of each customer for all the departments within an organization, such as Marketing, Sales, Commerce, and Service. Our salesforce tutorial is designed to help beginners with the Salesforce and professionals' basic concepts with advanced concepts. In this, we will cover all the essential topics of Salesforce from beginning to Apex development.</p> <h2 class="h2">What is Salesforce?</h2> 
+           <ul class="points"> 
+            <li>Salesforce is a <strong>SaaS or Software as a Service</strong>, which means there is no need to install the software or server to work on. Users can simply sign-up in Salesforce.com and can start running the business instantly.<br> <img src="https://static.javatpoint.com/tutorial/salesforce/images/salesforce-tutorial2.png" alt="Salesforce Tutorial"></li> 
+            <li>It was founded by <strong>Marc Benioff, Parker Harris, Dave Moellenhoff, and Frank Dominguez in 1999</strong>.</li> 
+            <li>Salesforce was started as a CRM software, but today it provides various products and software solutions to users and developers.</li> 
+            <li>Since Salesforce is cloud-based software, hence it does not require any IT professional to set up anything.</li> 
+            <li>It provides one of the best ways to connect with customers, business partners, and clients over the single integrated environment. It allows the businesses to identify the customer's requirements, address the problems easily, and provide the same solution in the minimum timeframe.</li> 
+           </ul> <p>Before going in deep with this tutorial, let's understand two basic concepts of Salesforce, <strong>CRM and Cloud Computing</strong>.</p> <h2 class="h2">CRM(Customer Relationship Management)</h2> <p><a href="salesforce-crm">CRM</a> stands for <strong>Customer Relationship Management</strong>, a software to manage all the customer and company's interactions. It contains and manages all the customer-related information such as Customer Name, <em>Address, Phone Number, Email address, and other business-related information. The software keeps all the interactions done with customers, complaints registered by the customer, resolutions provided by the executive, and other customer activities with the particular business or product</em>.</p> <p>It also allows us to track and manage the sales, marketing, and prospects given to customers.</p> <h2 class="h2">Cloud-Computing</h2> <p>Cloud computing is a <strong>technology to store, manage, process, and access the internet instead of a local server or computer hard drives</strong>.</p> <p>With the help of cloud computing, an organization can save lots of cost to local storage of data, maintenance of data, etc. The information over the Cloud can be accessed much efficiently and from anywhere, with the help of the internet.</p> <p>Using cloud computing instead of traditional storage helps users with lots of benefits such as <strong>speed, cost-effectiveness, security, global access, etc</strong>.</p> <h4 class="n">Note: In the next topic, we will learn a detailed introduction of Cloud computing.</h4> <h2 class="h2">History of Salesforce</h2> <p>Below are some milestones that occurred in the evolution of the Salesforce over the years from its beginning:</p> 
+           <ul class="points"> 
+            <li>The salesforce development was started in 1999 by <strong>Marc Benioff, Parker Harris, Frank Dominguez, and Dave Moellenhoff</strong>, developers with the same vision of Salesforce's CRM.</li> 
+            <li>In 2001, the salesforce company announced its worldwide expansion, and it surpassed 3000 customers in the same year and became the fastest-growing CRM company.</li> 
+            <li>In the year 2003, the first DreamForce event was held in San Francisco. In this event, the first on-demand application service sForce2.0 has launched.</li> 
+            <li>In the year 2005, Salesforce introduced its <strong>AppExchange</strong> Service. The service was designed to offer a platform to third-party developers to develop their applications and provide those apps to salesforce customers.</li> 
+            <li>In the year 2008, Force.com- "<strong>a salesforce development platform that allows developers to build applications</strong>," has released.</li> 
+            <li>In the year 2011, the company launched <strong>Chatter</strong>-a social collaboration service for the enterprise.</li> 
+            <li>In the year 2013, it launched the Salesforce1 platform to enable the customers to run their businesses from the phone.</li> 
+            <li>In the year 2014, the company launched the <strong>Trailhead</strong>, a platform to empower anyone to learn new skills.</li> 
+            <li>In the year 2015, Salesforce became one of the <strong>Fortune 500 companies</strong>.</li> 
+            <li>In the year 2019, the company acquired <strong>Tableau</strong>, and hence world 's number 1 CRM and number 1 analytics platform came together.</li> 
+           </ul> <h2 class="h2">Why choose Salesforce?</h2> <p>In the above section, we have learned about the Salesforce, but why should we choose it? What are the benefits? So below are some points that explain the benefits of choosing Salesforce:</p> <img src="https://static.javatpoint.com/tutorial/salesforce/images/salesforce-tutorial3.png" alt="Salesforce Tutorial"> 
+           <ul class="points"> 
+            <li>The first benefit of choosing Salesforce is that we do not need to install any software to build an application or run our business activities. We can focus on building the apps instead of installing, setup, repairing, etc.</li> 
+            <li>Since it is the cloud-based CRM platform, any user can access it from anywhere using the internet.</li> 
+            <li>Any new user or business start-up can choose Salesforce for building apps or run business, as it is so affordable with lots of capabilities.</li> 
+            <li>One can easily integrate the Salesforce with any third-party applications, such as Gmail, which is much easier than other CRM Software.</li> 
+            <li>It is the world's number 1 CRM software, as it is easy to use, fast to deploy any app, and provide efficient outputs as per the requirements.</li> 
+            <li>The development cost is also very less.</li> 
+           </ul> <h3 class="h3">Technologies used by the Salesforce</h3> 
+           <ul class="points"> 
+            <li><strong>Apex:</strong> Salesforce has its own programming languages, knows as Apex. Hence to become a salesforce developer, or to create a salesforce app, user must have a good knowledge of Salesforce Apex.</li> 
+            <li><strong>VisualForce:</strong> Visualforce is the framework introduced by the Salesforce, which enables the developers to create the custom user interfaces that can work on the lighting platform.</li> 
+            <li><strong>Compiler:</strong> Salesforce contains its own complier to compile the Apex programs and VisualForce Pages.</li> 
+           </ul> <h2 class="h2">Companies using Salesforce</h2> <p>Today, there are multiple big brands, and new start-ups who are using the Salesforce platform as CRM software and for other services. Below is the list of some popular companies that are using Salesforce for their businesses:</p> 
+           <ol class="points"> 
+            <li><strong>HCL Technologies</strong> use Salesforce CRM for data entry to validate customer data.</li> 
+            <li><strong>Pizza Hu</strong>t is providing the smart mobile experience to its customer using the marking salesforce cloud.</li> 
+            <li><strong>L'Oreal</strong> builds a social network using the Salesforce, by which they can share any Hair fashion-related plans or events to their stylist or customer.</li> 
+            <li><strong>American Express</strong> is using the Salesforce cloud since 2010, and now they can connect to their employees together across the organization, or from anywhere.</li> 
+            <li><strong>Nikon Instrument</strong> opted for the Salesforce CRM for their business, but later, they also started using the social network provided by the Chatter.</li> 
+            <li><strong>Comcast-Spectator</strong> uses the salesforce platform to manage the customer profiles that help them identify the customer interest and market more efficiently.</li> 
+            <li><strong>Sony</strong> uses the Salesforce Service Cloud to connect with their customers. All customer complaints are managed and taken care of with this to make the customers satisfied.</li> 
+           </ol> <p>Other companies, such as <strong>Urban Ladder, InMobi, Paytm, Genesys, etc</strong>., use Salesforce services for their business growth.</p> <h2 class="h2">Differences Between Salesforce CRM and Dynamic CRM</h2> <p>In today's market, various companies are offering CRM Solutions to their customers, such as <strong>SAP, Oracle, Microsoft dynamics, including Salesforce</strong>. In all these CRM solution companies, there is a big competition between the Salesforce and Microsoft Dynamic. Let's have a look at the difference between these two CRM solutions:</p> 
+           <table class="alt"> 
+            <tbody>
+             <tr> 
+              <th>Capabilities</th> 
+              <th>Salesforce</th> 
+              <th>Microsoft Dynamic</th> 
+             </tr> 
+             <tr> 
+              <td><strong>Deployment Options</strong></td> 
+              <td>Salesforce provides deploy on cloud-only option.</td> 
+              <td>Microsoft Dynamic CRM can be deployed on the Cloud, on-premise, or at partner-hosting.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Language Interface</strong></td> 
+              <td>Salesforce offers limited language support as compared to Microsoft Dynamic.</td> 
+              <td>It provides 35 language support to its customers.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Accessibility</strong></td> 
+              <td>It provides accessibility of web and mobile apps from anywhere.</td> 
+              <td>It also provides access to its web and mobile apps from anywhere.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Storage</strong></td> 
+              <td>It provides 1GB/user storage for 1 to 20 users.</td> 
+              <td>It provides 10GB shared storage for 1 to 20 users.</td> 
+             </tr> 
+             <tr> 
+              <td><strong>Pricing</strong></td> 
+              <td>It has a pricing rate of $25-$300 per user/ month.</td> 
+              <td>It has a pricing rate of $65-$135 per user/month.</td> 
+             </tr> 
+            </tbody>
+           </table> <h2 class="h2">Audience</h2> <p>This salesforce tutorial is designed to help beginners, cloud computing enthusiasts, and developers to learn the Salesforce CRM software for various business requirements.</p> <h2 class="h2">Prerequisites</h2> <p>Below prerequisites are essential before learning the salesforce tutorial:</p> 
+           <ul class="points"> 
+            <li>To completely understand the Salesforce and its architecture, one must have a basic understanding about <strong>cloud computing</strong>.</li> 
+            <li>The knowledge of <strong>database storage</strong> is also required to understand how customer data is stored, retrieved, and managed.</li> 
+           </ul> <h2 class="h2">Problems</h2> <p>We assure you that you will not find any difficulty while learning our salesforce tutorial. But if there is any mistake in this tutorial, kindly post the problem or error in the contact form to improve it.</p> 
+           <hr> 
+           <div class="nexttopicdiv"> <span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="salesforce-overview-of-cloud-computing">Cloud Computing</a></span> 
+           </div> <br><br> 
+           <div id="bottomnext"> <a style="float:right" class="next" href="salesforce-overview-of-cloud-computing">next &#x2192;</a> 
+           </div> <br><br> </td>
+         </tr> 
+        </tbody>
+       </table> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <div>
+       <img class="lazyload" data-src="https://static.javatpoint.com/images/youtube-32.png" style="vertical-align:middle;" alt="Youtube"> <span class="h3" style="vertical-align:middle;font-size:22px"> For Videos Join Our Youtube Channel: <a href="https://bit.ly/2FOeX6S" target="_blank"> Join Now</a></span> 
+      </div> 
+      <hr class="hrhomebox"> 
+      <h3 class="h3">Feedback</h3> 
+      <ul class="points"> 
+       <li>Send your Feedback to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a7c7f7f7e787b79715a707b6c7b6e6a7573746e34797577">[email&nbsp;protected]</a></li> 
+      </ul> 
+      <hr class="hrhomebox"> 
+      <h2 class="h2">Help Others, Please Share</h2> <a rel="nofollow" title="Facebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.javatpoint.com/salesforce"><img src="https://www.javatpoint.com/images/facebook32.png" alt="facebook"></a> <a rel="nofollow" title="Twitter" target="_blank" href="https://twitter.com/share?url=https://www.javatpoint.com/salesforce"><img src="https://www.javatpoint.com/images/twitter32.png" alt="twitter"></a> <a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/salesforce"><img src="https://www.javatpoint.com/images/pinterest32.png" alt="pinterest"></a> 
+      <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4699858549023382" data-ad-slot="5022809933" data-ad-format="auto" data-full-width-responsive="true"></ins> 
+      <script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Learn Latest Tutorials</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/splunk"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/splunk.png" alt="Splunk tutorial"> 
+          <p>Splunk</p> 
+         </div> </a> <a href="https://www.javatpoint.com/spss"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/spss.png" alt="SPSS tutorial"> 
+          <p>SPSS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/swagger"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/swagger.png" alt="Swagger tutorial"> 
+          <p>Swagger</p> 
+         </div> </a> <a href="https://www.javatpoint.com/t-sql"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/transact-sql.png" alt="T-SQL tutorial"> 
+          <p>Transact-SQL</p> 
+         </div> </a> <a href="https://www.javatpoint.com/tumblr"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/tumblr.png" alt="Tumblr tutorial"> 
+          <p>Tumblr</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="React tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/regex"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/regex.png" alt="Regex tutorial"> 
+          <p>Regex</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reinforcement-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react.png" alt="Reinforcement learning tutorial"> 
+          <p>Reinforcement Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/r-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/r-programming.png" alt="R Programming tutorial"> 
+          <p>R Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/rxjs"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/rxjs.png" alt="RxJS tutorial"> 
+          <p>RxJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/react-native-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/react-native.png" alt="React Native tutorial"> 
+          <p>React Native</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-design-pattern"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-design-patterns.png" alt="Python Design Patterns"> 
+          <p>Python Design Patterns</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-pillow"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-pillow.png" alt="Python Pillow tutorial"> 
+          <p>Python Pillow</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-turtle-programming"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python-turtle.png" alt="Python Turtle tutorial"> 
+          <p>Python Turtle</p> 
+         </div> </a> <a href="https://www.javatpoint.com/keras"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/keras.png" alt="Keras tutorial"> 
+          <p>Keras</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Preparation</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/aptitude/quantitative"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/aptitude/images/quantitative-aptitude-home.png" alt="Aptitude"> 
+          <p>Aptitude</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reasoning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/reasoning/images/reasoning-home.png" alt="Logical Reasoning"> 
+          <p>Reasoning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/verbal-ability"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/verbal-ability/images/verbal-ability-home.png" alt="Verbal Ability"> 
+          <p>Verbal Ability</p> 
+         </div> </a> <a href="https://www.javatpoint.com/interview-questions-and-answers"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/logo/interviewhome.png" alt="Interview Questions"> 
+          <p>Interview Questions</p> 
+         </div> </a> <a href="https://www.javatpoint.com/company-interview-questions-and-recruitment-process"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/interview/images/company-home.jpeg" alt="Company Interview Questions"> 
+          <p>Company Questions</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">Trending Technologies</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/artificial-intelligence-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/artificial-intelligence.png" alt="Artificial Intelligence Tutorial"> 
+          <p>Artificial Intelligence</p> 
+         </div> </a> <a href="https://www.javatpoint.com/aws-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/amazon-web-services.png" alt="AWS Tutorial"> 
+          <p>AWS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/selenium-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/selenium.png" alt="Selenium tutorial"> 
+          <p>Selenium</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cloud-computing-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cloud-computing.png" alt="Cloud Computing tutorial"> 
+          <p>Cloud Computing</p> 
+         </div> </a> <a href="https://www.javatpoint.com/hadoop-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/hadoop.png" alt="Hadoop tutorial"> 
+          <p>Hadoop</p> 
+         </div> </a> <a href="https://www.javatpoint.com/reactjs-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/reactjs.png" alt="ReactJS Tutorial"> 
+          <p>ReactJS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-science"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-science.png" alt="Data Science Tutorial"> 
+          <p>Data Science</p> 
+         </div> </a> <a href="https://www.javatpoint.com/angular-7-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/angular7.png" alt="Angular 7 Tutorial"> 
+          <p>Angular 7</p> 
+         </div> </a> <a href="https://www.javatpoint.com/blockchain-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/blockchain.png" alt="Blockchain Tutorial"> 
+          <p>Blockchain</p> 
+         </div> </a> <a href="https://www.javatpoint.com/git"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/git.png" alt="Git Tutorial"> 
+          <p>Git</p> 
+         </div> </a> <a href="https://www.javatpoint.com/machine-learning"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/machine-learning.png" alt="Machine Learning Tutorial"> 
+          <p>Machine Learning</p> 
+         </div> </a> <a href="https://www.javatpoint.com/devops"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/devops.png" alt="DevOps Tutorial"> 
+          <p>DevOps</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+      <hr class="hrhomebox"> 
+      <fieldset class="gra1"> 
+       <h2 class="h3">B.Tech / MCA</h2> 
+       <div class="firsthomecontent"> <a href="https://www.javatpoint.com/dbms-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dbms.png" alt="DBMS tutorial"> 
+          <p>DBMS</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-structure-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-structures.png" alt="Data Structures tutorial"> 
+          <p>Data Structures</p> 
+         </div> </a> <a href="https://www.javatpoint.com/daa-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/daa.png" alt="DAA tutorial"> 
+          <p>DAA</p> 
+         </div> </a> <a href="https://www.javatpoint.com/os-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/operating-system.png" alt="Operating System tutorial"> 
+          <p>Operating System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-network-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-network.png" alt="Computer Network tutorial"> 
+          <p>Computer Network</p> 
+         </div> </a> <a href="https://www.javatpoint.com/compiler-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/compiler-design.png" alt="Compiler Design tutorial"> 
+          <p>Compiler Design</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-organization-and-architecture-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-organization.png" alt="Computer Organization and Architecture"> 
+          <p>Computer Organization</p> 
+         </div> </a> <a href="https://www.javatpoint.com/discrete-mathematics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/discrete-mathematics.png" alt="Discrete Mathematics Tutorial"> 
+          <p>Discrete Mathematics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/ethical-hacking-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/ethical-hacking.png" alt="Ethical Hacking Tutorial"> 
+          <p>Ethical Hacking</p> 
+         </div> </a> <a href="https://www.javatpoint.com/computer-graphics-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/computer-graphics.png" alt="Computer Graphics Tutorial"> 
+          <p>Computer Graphics</p> 
+         </div> </a> <a href="https://www.javatpoint.com/software-engineering-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/software-engineering.png" alt="Software Engineering Tutorial"> 
+          <p>Software Engineering</p> 
+         </div> </a> <a href="https://www.javatpoint.com/html-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/web-technology.png" alt="html tutorial"> 
+          <p>Web Technology</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cyber-security-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cyber-security.png" alt="Cyber Security tutorial"> 
+          <p>Cyber Security</p> 
+         </div> </a> <a href="https://www.javatpoint.com/automata-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/automata.png" alt="Automata Tutorial"> 
+          <p>Automata</p> 
+         </div> </a> <a href="https://www.javatpoint.com/c-programming-language-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/c-programming.png" alt="C Language tutorial"> 
+          <p>C Programming</p> 
+         </div> </a> <a href="https://www.javatpoint.com/cpp-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/cpp.png" alt="C++ tutorial"> 
+          <p>C++</p> 
+         </div> </a> <a href="https://www.javatpoint.com/java-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/java.png" alt="Java tutorial"> 
+          <p>Java</p> 
+         </div> </a> <a href="https://www.javatpoint.com/net-framework"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/dot-net.png" alt=".Net Framework tutorial"> 
+          <p>.Net</p> 
+         </div> </a> <a href="https://www.javatpoint.com/python-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/python.png" alt="Python tutorial"> 
+          <p>Python</p> 
+         </div> </a> <a href="https://www.javatpoint.com/programs-list"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/programs.png" alt="List of Programs"> 
+          <p>Programs</p> 
+         </div> </a> <a href="https://www.javatpoint.com/control-system-tutorial"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/control-system.png" alt="Control Systems tutorial"> 
+          <p>Control System</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-mining"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-mining.png" alt="Data Mining Tutorial"> 
+          <p>Data Mining</p> 
+         </div> </a> <a href="https://www.javatpoint.com/data-warehouse"> 
+         <div class="homecontent">
+          <img class="lazyload" data-src="https://static.javatpoint.com/images/homeicon/data-warehouse.png" alt="Data Warehouse Tutorial"> 
+          <p>Data Warehouse</p> 
+         </div> </a> 
+       </div> 
+      </fieldset> 
+     </div> 
+     <br>
+     <br>
+     <div class="mobilemenu" style="clear:both"> 
+      <ins class="adPushupAds" data-adpcontrol="jrfe7" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByZXNwb25zaXZlbW9iaWxlZm9vdGVyIC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTpibG9jayIKICAgICBkYXRhLWFkLWNsaWVudD0iY2EtcHViLTQ2OTk4NTg1NDkwMjMzODIiCiAgICAgZGF0YS1hZC1zbG90PSI4MjIyODY2MzE4IgogICAgIGRhdGEtYWQtZm9ybWF0PSJhdXRvIgogICAgIGRhdGEtZnVsbC13aWR0aC1yZXNwb25zaXZlPSJ0cnVlIj48L2lucz4KPHNjcmlwdD4KKGFkc2J5Z29vZ2xlID0gd2luZG93LmFkc2J5Z29vZ2xlIHx8IFtdKS5wdXNoKHt9KTsKPC9zY3JpcHQ+"></ins>
+      <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     </div>
+    </div> 
+    <div id="right"> 
+     <div id="e59d93b5-7231-4043-a19e-e7ec340efd1f" class="_ap_apex_ad"> 
+      <script>
+		var adpushup = window.adpushup = window.adpushup || {};
+		adpushup.que = adpushup.que || [];
+		adpushup.que.push(function() {
+			adpushup.triggerAd("e59d93b5-7231-4043-a19e-e7ec340efd1f");
+		});
+	</script> 
+     </div> 
+     <br>
+     <br> 
+    </div> 
+    <div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+     <br>
+     <br> 
+     <ins class="adPushupAds" data-adpcontrol="6d5qg" data-ver="2" data-siteid="37780" data-ac="PHNjcmlwdCBhc3luYyBzcmM9Ii8vcGFnZWFkMi5nb29nbGVzeW5kaWNhdGlvbi5jb20vcGFnZWFkL2pzL2Fkc2J5Z29vZ2xlLmpzIj48L3NjcmlwdD4KPCEtLSByaWdodDEwMjRvbmx5IC0tPgo8aW5zIGNsYXNzPSJhZHNieWdvb2dsZSIKICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmUtYmxvY2s7d2lkdGg6MTIwcHg7aGVpZ2h0OjYwMHB4IgogICAgIGRhdGEtYWQtY2xpZW50PSJjYS1wdWItNDY5OTg1ODU0OTAyMzM4MiIKICAgICBkYXRhLWFkLXNsb3Q9IjIxODAxMTg3MTYiPjwvaW5zPgo8c2NyaXB0PgooYWRzYnlnb29nbGUgPSB3aW5kb3cuYWRzYnlnb29nbGUgfHwgW10pLnB1c2goe30pOwo8L3NjcmlwdD4K"></ins>
+     <script data-cfasync="false" type="text/javascript">(function (w, d) { for (var i = 0, j = d.getElementsByTagName("ins"), k = j[i]; i < j.length; k = j[++i]){ if(k.className == "adPushupAds" && k.getAttribute("data-push") != "1") { ((w.adpushup = w.adpushup || {}).control = (w.adpushup.control || [])).push(k); k.setAttribute("data-push", "1");} } })(window, document);</script> 
+    </div> 
+    <br> 
+    <div id="footer" style="clear:both;width:100%"> 
+     <div style="width:100%;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Javatpoint Services</h2> 
+      <p style="padding:0px 20px 0px 20px">JavaTpoint offers too many high quality services. Mail us on <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="254d57654f44534451554a4c4b510b464a48">[email&nbsp;protected]</a>, to get more information about given services. </p>
+      <ul class="points"> 
+       <li>Website Designing</li>
+       <li>Website Development</li>
+       <li>Java Development</li>
+       <li>PHP Development</li>
+       <li>WordPress</li>
+       <li>Graphic Designing</li>
+       <li>Logo</li>
+       <li>Digital Marketing</li>
+       <li>On Page and Off Page SEO</li>
+       <li>PPC</li>
+       <li>Content Development</li>
+       <li>Corporate Training</li>
+       <li>Classroom and Online Training</li>
+       <li>Data Entry</li>
+      </ul> 
+      <p style="padding-bottom:60px"></p>
+     </div>
+     <div style="width:100%;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;"> 
+      <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2> 
+      <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93fbe1d3f9f2e5f2e7e3fcfafde7bdf0fcfebd">[email&nbsp;protected]</a> <br>Duration: 1 week to 2 week<br></p>
+     </div>
+     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+     <script>var _gaq=_gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function(){var ga=document.createElement('script'); ga.type='text/javascript'; ga.async=true; ga.src=('https:'==document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js'; var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+     <div style="margin-top:5px;text-align:center"> <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup> <a target="_blank" rel="nofollow noopener" href="https://feeds.feedburner.com/javatpointsonoo"><img src="https://static.javatpoint.com/images/social/rss1.png" alt="RSS Feed"></a> <a target="_blank" rel="nofollow noopener" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="https://static.javatpoint.com/images/social/mail1.png" alt="Subscribe to Get Email Alerts"></a> <a rel="nofollow noopener" target="_blank" href="https://www.facebook.com/javatpoint"><img src="https://static.javatpoint.com/images/social/facebook1.jpg" alt="Facebook Page"></a> <a target="_blank noopener" rel="nofollow" href="https://twitter.com/pagejavatpoint"><img src="https://static.javatpoint.com/images/social/twitter1.png" alt="Twitter Page"></a> <a target="_blank" rel="nofollow noopener" href="https://www.youtube.com/channel/UCUnYvQVCrJoFWZhKK3O2xLg"><img src="https://static.javatpoint.com/images/youtube32.png" alt="YouTube"></a> <a target="_blank" rel="nofollow noopener" href="https://javatpoint.blogspot.com"><img src="https://static.javatpoint.com/images/social/blog.png" alt="Blog Page"></a> 
+     </div>
+     <footer class="footer1">
+      <div class="column4">
+       <h3>Learn Tutorials</h3><a href="https://www.javatpoint.com/java-tutorial">Learn Java</a><a href="https://www.javatpoint.com/data-structure-tutorial">Learn Data Structures</a><a href="https://www.javatpoint.com/c-programming-language-tutorial">Learn C Programming</a><a href="https://www.javatpoint.com/cpp-tutorial">Learn C++ Tutorial</a><a href="https://www.javatpoint.com/c-sharp-tutorial">Learn C# Tutorial</a><a href="https://www.javatpoint.com/php-tutorial">Learn PHP Tutorial</a><a href="https://www.javatpoint.com/html-tutorial">Learn HTML Tutorial</a><a href="https://www.javatpoint.com/javascript-tutorial">Learn JavaScript Tutorial</a><a href="https://www.javatpoint.com/jquery-tutorial">Learn jQuery Tutorial</a><a href="https://www.javatpoint.com/spring-tutorial">Learn Spring Tutorial</a>
+      </div>
+      <div class="column4">
+       <h3>Our Websites</h3><a href="https://www.javatpoint.com">Javatpoint.com</a><a rel="dofollow noopener" target="_blank" href="https://www.hindi100.com">Hindi100.com</a><a rel="dofollow noopener" target="_blank" href="https://www.lyricsia.com">Lyricsia.com</a><a rel="nofollow noopener" target="_blank" href="https://www.quoteperson.com">Quoteperson.com</a><a rel="nofollow noopener" target="_blank" href="https://www.jobandplacement.com">Jobandplacement.com</a>
+      </div>
+      <div class="column4">
+       <h3>Our Services</h3>
+       <p>Website Development</p>
+       <p>Android Development</p>
+       <p>Website Designing</p>
+       <p>Digital Marketing</p>
+       <p>Summer Training</p>
+       <p>Industrial Training</p>
+       <p>College Campus Training</p>
+      </div>
+      <div class="column4">
+       <h3>Contact</h3>
+       <p>Address: G-13, 2nd Floor, Sec-3</p>
+       <p>Noida, UP, 201301, India</p>
+       <p>Contact No: 0120-4256464, 9990449935</p><a href="https://www.javatpoint.com/contact-us">Contact Us</a> <a href="https://www.javatpoint.com/subscribe.jsp">Subscribe Us</a> <a href="https://www.javatpoint.com/privacy-policy">Privacy Policy</a><a href="https://www.javatpoint.com/sitemap.xml">Sitemap</a>
+       <br><a href="https://www.javatpoint.com/sonoo-jaiswal">About Me</a>
+      </div>
+     </footer>
+     <footer class="footer2">
+      <p>© Copyright 2011-2021 www.javatpoint.com. All rights reserved. Developed by JavaTpoint.</p>
+     </footer> 
+     <div id="bot-root"></div> 
+     <script> 
+ (function() {
+ var e = document.createElement('script');
+ e.src = 'https://app.pushbrothers.com/js/notification-bot.js?cnfg=a3cc04a1-8471-450e-b01e-c9d752b16eb0';
+ document.getElementById('bot-root').appendChild(e);}());
+</script> 
+    </div> 
+   </div>
+  </div> 
+  <script src="https://static.javatpoint.com/js/shcoreandbrush.js"></script>
+  <script> dp.SyntaxHighlighter.HighlightAll('code'); </script> 
+  <script src="https://static.javatpoint.com/lazysizes.min.js" async></script>  
+ </body>
+</html>
